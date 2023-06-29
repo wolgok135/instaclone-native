@@ -37,7 +37,7 @@ export default function AuthLayout({ children }) {
         >
           <Logo
             resizeMode="contain"
-            source={require("../assets/whiteLogo.png")}
+            source={require("../../assets/whiteLogo.png")}
           />
           {children}
         </KeyboardAvoidingView>

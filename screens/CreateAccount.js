@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from "react";
 
 import styled from "styled-components/native";
-import AuthLayout from "../auth/AuthLayout";
-import AuthButton from "../auth/AuthButton";
+import AuthLayout from "../components/auth/AuthLayout";
+import AuthButton from "../components/auth/AuthButton";
 import { KeyboardAvoidingView, Text, TextInput } from "react-native";
-import { MyTextInput } from "../auth/AuthShared";
+import { MyTextInput } from "../components/auth/AuthShared";
 import { useForm } from "react-hook-form";
 import { gql, useMutation } from "@apollo/client";
 

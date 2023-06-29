@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 
-import AuthLayout from "../auth/AuthLayout";
-import { MyTextInput } from "../auth/AuthShared";
+import AuthLayout from "../components/auth/AuthLayout";
+import { MyTextInput } from "../components/auth/AuthShared";
 import { useForm } from "react-hook-form";
-import AuthButton from "../auth/AuthButton";
+import AuthButton from "../components/auth/AuthButton";
 import { gql, useMutation } from "@apollo/client";
 import { isLoggedInVar, logUserIn } from "../apollo";
 

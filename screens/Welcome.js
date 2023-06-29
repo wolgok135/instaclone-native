@@ -1,10 +1,10 @@
 import React from "react";
 import { Text, View } from "react-native";
 import styled from "styled-components";
-import { colors } from "../color";
+import { colors } from "../colors";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import AuthLayout from "../auth/AuthLayout";
-import AuthButton from "../auth/AuthButton";
+import AuthLayout from "../components/auth/AuthLayout";
+import AuthButton from "../components/auth/AuthButton";
 
 const LoginLink = styled.Text`
   color: ${colors.blue};
