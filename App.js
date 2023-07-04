@@ -39,12 +39,12 @@ export default function App() {
       isLoggedInVar(true);
       tokenVar(token);
     }
-
+    /*
     await persistCache({
       cache,
       storage: new AsyncStorageWrapper(AsyncStorage),
     });
-
+*/
     return preloadAssets();
   };
   const onFinish = () => setLoading(false);
