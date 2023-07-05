@@ -52,6 +52,7 @@ const Caption = styled.View`
 const CaptionText = styled.Text`
   color: white;
   margin-left: 10px;
+  width: 75%;
 `;
 const Likes = styled.Text`
   color: white;

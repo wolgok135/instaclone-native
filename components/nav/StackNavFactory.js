@@ -1,6 +1,6 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
-import HomePhoto from "../../screens/HomePhoto";
+import SinglePhoto from "../../screens/SinglePhoto";
 import Profile from "../../screens/Profile";
 import Feed from "../../screens/Feed";
 import Search from "../../screens/Search";
@@ -48,7 +48,7 @@ export default function StackNavFactory({ screenName }) {
       ) : null}
       {screenName === "Me" ? <Stack.Screen name="Me" component={Me} /> : null}
       <Stack.Screen name="Profile" component={Profile} />
-      <Stack.Screen name="HomePhoto" component={HomePhoto} />
+      <Stack.Screen name="SinglePhoto" component={SinglePhoto} />
       <Stack.Screen name="Likes" component={Likes} />
       <Stack.Screen name="Comments" component={Comments} />
     </Stack.Navigator>

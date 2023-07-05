@@ -3,14 +3,32 @@ import React, { useEffect } from "react";
 import { Text, View } from "react-native";
 import useMe from "../hooks/userMe";
 
-export default function Me({ navigation }) {
-  const { data } = useMe();
+import { COMMENT_FRAGMENT, PHOTO_FRAGMENT } from "../fragments";
+import { gql, useQuery } from "@apollo/client";
 
-  useEffect(() => {
-    navigation.setOptions({
-      title: data?.me?.userName,
-    });
+const SEE_PHOTO_RE = gql`
+  query seePhoto($id: Int!) {
+    seePhoto(id: $id) {
+      ...PhotoFragment
+      user {
+        id
+        userName
+        avatar
+      }
+      caption
+    }
+  }
+  ${PHOTO_FRAGMENT}
+`;
+
+export default function Me({ navigation }) {
+  const { data } = useQuery(SEE_PHOTO_RE, {
+    variables: {
+      id: 23,
+    },
   });
+
+  console.log(data);
 
   return (
     <View
