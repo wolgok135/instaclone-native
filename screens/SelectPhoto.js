@@ -69,7 +69,9 @@ export default function SelectPhoto({ navigation }) {
   };
   const getPhotos = async () => {
     try {
-      const { assets: photos } = await MediaLibrary.getAssetsAsync();
+      const { assets: photos } = await MediaLibrary.getAssetsAsync({
+        first: 50,
+      });
       setPhotos(photos);
       setChosenPhoto(photos[0]?.uri);
     } catch (err) {
